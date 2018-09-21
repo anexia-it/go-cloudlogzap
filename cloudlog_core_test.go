@@ -2,7 +2,6 @@ package cloudlogzap
 
 import (
 	"github.com/anexia-it/go-cloudlog"
-	"github.com/davecgh/go-spew/spew"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"go.uber.org/zap/zapcore"
@@ -59,7 +58,6 @@ func TestCloudLogCore_Check(t *testing.T) {
 		ErrorOutput: zapcore.NewMultiWriteSyncer(),
 	}
 	result := core.Check(entry, checkedEntry)
-	spew.Dump(result.Entry)
 	require.NotNil(t, result)
 }
 
@@ -106,7 +104,6 @@ func TestCloudLogCore_ConverterFunc(t *testing.T) {
 	require.True(t, ok)
 	assert.EqualValues(t, "test message", d.Message)
 	assert.EqualValues(t, "info", d.Level)
-	spew.Dump(d.Fields)
 	for _, expected := range ff {
 		_, ok := d.Fields[expected.Key]
 		assert.True(t, ok)

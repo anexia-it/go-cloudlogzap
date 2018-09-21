@@ -5,7 +5,7 @@
 [![codecov](https://codecov.io/gh/anexia-it/go-cloudlogzap/branch/master/graph/badge.svg)](https://codecov.io/gh/anexia-it/go-cloudlogzap)
 [![Go Report Card](https://goreportcard.com/badge/github.com/anexia-it/go-cloudlogzap)](https://goreportcard.com/report/github.com/anexia-it/go-cloudlogzap)
 
-go-cloudlogzap implements a `zapcore` to hook log message from a `zap.Logger` to Anexia's CloudLog.  
+go-cloudlogzap implements a custom `zapcore` to hook log message from a `zap.Logger` to Anexia's CloudLog.  
 
 ## Motivation
 The primary motivation for go-cloudlogzap is the need to send log output from `go.uber.org/zap`'s logger to ANEXIA's CloudLog infrastructure.
